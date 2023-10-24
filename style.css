@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    box-sizing     : border-box;
+    padding        : 0;
+    margin         : 0;
+    text-decoration: none;
+}
+
+body {
+    height          : 100vh;
+    background-color: black;
+    font-family     : 'Lato', sans-serif;
+    overflow        : hidden;
+}
+
+.wrapper {
+    padding-top  : 3rem;
+    margin-bottom: 2rem;
+    left         : 50%;
+    transform    : translateX(50%);
+}
+
+.content {
+    position: relative;
+}
+
+.content h2 {
+    position : absolute;
+    transform: translate(-50%, -50%);
+    font-size: 7vw;
+}
+
+.content h2:nth-child(1) {
+    color              : transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+}
+
+.content h2:nth-child(2) {
+    color    : #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    100% {
+        clip-path: polygon(0 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+
+}
+
+a {
+    color      : rgb(240, 220, 45);
+    font-size  : 2rem;
+    font-weight: 600;
+    display    : block;
+    text-align : center;
+    margin-top : 3rem;
+}
+
+a:hover {
+    color: chartreuse;
+}
