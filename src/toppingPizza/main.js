@@ -1,3 +1,6 @@
+
+//! SELECCIONAR ELEMENTOS
+
 // Seleccionar elemento por id.
 
 // Contenedor
@@ -21,7 +24,7 @@ console.log(typeof titulo.tagName);
 const toppings = document.getElementsByClassName('topping')
 console.log(toppings[0].id)
 
-// Todos los elementos.
+// Todos los elementos
 console.log(toppings);
 
 // Elementos individuales.
@@ -58,9 +61,6 @@ console.log(typeof aceitunas.className);
 const misToppings = document.getElementsByTagName('li');
 console.log(misToppings);
 
-const tag = document.getElementById('titulo');
-console.log(tag);
-
 console.log(document.body);
 
 // Seleccionar solo el primer elemento que cumpla el criterio
@@ -88,3 +88,67 @@ console.log(toppingsNaranja.length);
 console.log(toppingsNaranja[0]);
 console.log(toppingsNaranja[1]);
 console.log(typeof toppingsNaranja); // Object
+
+//! ASIGNAR ESTILOS
+
+const primerTopping = document.querySelector('.topping')
+console.log(primerTopping.style)//Con esto se puede ver todas las propiedades que se pueden personalizar
+
+primerTopping.style.backgroundColor = 'blue'
+primerTopping.style.color = '#22aa8f'
+primerTopping.style.textTransform = 'uppercase'
+
+//! ACCEDER AL TEXTO
+
+const listaDeToppings = document.getElementById('lista-toppings')
+
+console.log('>innerText')
+console.log(listaDeToppings.innerText)//Texto interno
+
+console.log('>textContent')
+console.log(listaDeToppings.textContent)//Muestra el texto con el espacio que aparecen en el documento HTML
+
+console.log('>innerHTML')
+console.log(listaDeToppings.innerHTML)//Retorna la estructura interna del elemento
+
+
+//! MODIFICAR EL TEXTO
+
+const cambiarTitulo = document.getElementById('titulo')
+
+//cambiarTitulo.innerText = "Pizzas favoritas" 
+
+//! ATRIBUTOS 
+
+const enlaces = document.getElementsByTagName('a')
+
+
+console.log('>Acceder al atributo de un elemento')
+console.log(enlaces[0].getAttribute('href'))//acá usammos notación de punto porque getElementsByTagName devuelve euna colección HTML
+
+
+console.log('>Remover el atributo de un elemento')
+//console.log(enlaces[0].removeAttribute('href'))
+
+console.log('>Actualizar valor del atributo de un elemento')
+console.log(enlaces[0].setAttribute('href', 'https://www.instagram.com/pizzeriaguerrin/?hl=es-la'))
+
+
+//! AGREGAR Y ELIMINAR CLASES
+
+const elPrimerTopping = document.querySelector('.topping')
+
+console.log(elPrimerTopping)
+console.log(elPrimerTopping.classList)//Lista de todas las clases que tiene ese elemento y se accede con notación de puntos a cada uno
+
+//agregar una clase
+elPrimerTopping.classList.add('clase-agregada')
+
+//Verificar si existe una clase
+console.log('>Verificar si existe una clase')//retorna true o false, útiles para los if
+console.log(elPrimerTopping.classList.contains('fondo-marron'))
+
+//Remover una clase
+elPrimerTopping.classList.remove('topping')
+
+

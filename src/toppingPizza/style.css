@@ -60,3 +60,7 @@ ul{
 .fondo-naranja{
     background-color: #ff7b0f;
 }
+
+.clase-agregada{
+    font-weight: bold;
+}
