@@ -14,7 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('../toppingPizza/bg-img.jpg') no-repeat center center/ cover;
+    background: #f3db53f8 url('../toppingPizza/bg-img.jpg') no-repeat center center/ cover;
 }
 
 #contenedor{
