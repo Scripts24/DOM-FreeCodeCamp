@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding   : 0;
+    margin    : 0;
+    border    : none;
+}
+
+body {
+    height         : 100vh;
+    font-family    : 'Roboto', sans-serif;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    text-align     : center;
+    background     : url(bg.jpg) no-repeat center center/cover;
+}
+
+.contenedor-principal {
+    width           : 80vw;
+    max-width       : 600px;
+    min-height      : 350px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    flex-wrap       : wrap;
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius   : 15px;
+}
+
+.contenedor-botones {
+    padding: 20px;
+}
+
+#cronometro {
+    width      : 100%;
+    font-size  : 80px;
+    font-weight: 700;
+    user-select: none;
+}
+
+.boton {
+    width    : 80px;
+    height   : 80px;
+    font-size: 50px;
+    margin   : 10px;
+    padding  : 10px;
+    cursor   : pointer;
+}
+
+#boton-inicio-pausa.iniciar,
+#boton-inicio-pausa.iniciar i {
+    background-color: rgb(57, 245, 10);
+}
+
+#boton-inicio-pausa.pausar,
+#boton-inicio-pausa.pausar i {
+    background-color: rgb(255, 238, 2);
+}
+
+#boton-reiniciar {
+    background-color: red;
+}
